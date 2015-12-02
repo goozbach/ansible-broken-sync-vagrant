@@ -1,0 +1,9 @@
+---
+- name: test broke sync
+  hosts: all
+  user: root
+  gather_facts: True
+
+  tasks:
+    - name: sync foo 
+      synchronize: src=foo dest=/var/foo
